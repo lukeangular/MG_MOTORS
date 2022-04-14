@@ -1,0 +1,20 @@
+.timeline>div>.timeline-item{
+    margin-left: 0px !important;
+}
+.timeline-item {
+    width: 100% !important;
+}
+
+.timeline::before {
+    left: 50%;
+}
+
+.timeline>div {
+    margin-bottom: 15px;
+    margin-right: 0px !important;
+    position: relative;
+}
+
+.timeline-item{
+    margin: 0px auto !important;
+}

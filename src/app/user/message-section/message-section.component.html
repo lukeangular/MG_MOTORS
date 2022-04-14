@@ -1,0 +1,73 @@
+<div class="contact-form">
+
+    <div style="background-color: #d1e7dd !important;" class="alert alert-success lert-dismissible fade show w-75" role="alert" *ngIf="successMessage">
+        <b style="color:#0f5132 !important"> Thank you, we will be back soon!</b>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div style="background-color: #fff3cd !important;" class="alert alert-warning lert-dismissible fade show w-75 " role="alert" *ngIf="invalidMessage">
+        <b style="color : #664d03 !important">Invalid form</b>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+
+
+    <form class="form-input" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="input">
+            <label for="fname">
+                full name :
+            </label>
+            <input type="text" required="" formControlName="fname" name="fname"  autocomplete="off">
+            <small class="text-danger"
+            *ngIf="contactForm.get('fname')?.invalid && contactForm.get('fname')?.touched">Name
+            is not valid</small>
+        </div>
+        <div class="input">
+            <label for="email">
+                email :
+            </label>
+            <input type="text" required="" formControlName="email" name="email" autocomplete="off">
+            <small class="text-danger"
+                    *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">Email
+                    is not valid</small>
+        </div>
+        <div class="input">
+            <label for="email">
+                phone :
+            </label>
+            <input type="number" required="" formControlName="phone" name="phone"
+                autocomplete="off">
+                <small class="text-danger" *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">Phone number
+                is not valid</small>
+        </div>
+        <div class="input">
+            <label for="subject">
+                subject :
+            </label>
+            <input type="text" required="" formControlName="subject" name="subject"
+                autocomplete="off">
+                <small class="text-danger" *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">Subject
+                    is not valid</small>
+        </div>
+
+        <div class="input custom-input">
+            <label for="message">
+                message :
+            </label>
+            <input class="textarea write-post-input"
+                role="textbox" contenteditable required  formControlName="message" name="mesage">
+                <small class="text-danger" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">Message
+                    is not valid</small>
+        </div>
+
+        <div class="send-button">
+            <button type="submit" class="btn btn-danger"  [disabled]="contactForm.invalid">
+                <span>send message</span>
+            </button>
+        </div>
+    </form>
+</div>

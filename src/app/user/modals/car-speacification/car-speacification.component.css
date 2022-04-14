@@ -1,0 +1,40 @@
+.specificaitonButton{
+    text-decoration: none;
+    color: white;
+    background-color: None !important;
+} 
+
+.card-header{
+    cursor: pointer;
+}
+.engine-card-header.active{
+    background-color: #CE2C25 !important;
+
+}
+.engine-icon.active{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+.performance-card-header.active{
+    background-color: #CE2C25 !important;
+}
+.suspension-card-header.active{
+    background-color: #CE2C25 !important;
+}
+.safety-card-header.active{
+    background-color: #CE2C25 !important;
+}
+.comfort-card-header.active{
+    background-color: #CE2C25 !important;
+}
+.entartaintment-card-header.active{
+    background-color: #CE2C25 !important;
+}
+.extra-card-header.active{
+    background-color: #CE2C25 !important;
+}

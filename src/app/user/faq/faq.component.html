@@ -1,0 +1,29 @@
+<div class="faq-section" loading="lazy">
+    <app-breadcrumb [title] = "title"></app-breadcrumb>
+
+    <div class="collapse-area">
+        <div class="wrapper">
+            <div class="collapse-tab">
+                <div class="panel-group" id="accordion" *ngFor="let faq of faq_list, let i = index">
+                    <div class="panel panel-default" id="panel1" (click)="faqClick(i)">
+                        <div class="panel-heading" >
+                            <h4 class="panel-title" >
+                                <a class="collapsed">
+                                    <span class="open-close-button"></span>
+                                    <span class="panel-answer">
+                                        {{faq.question}}
+                                    </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div  *ngIf="i==index" class="panel-collapse collapse in p-3" id="collpase" style="display: block !important;">
+                            <div class="panel-body">
+                            {{faq.answer}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

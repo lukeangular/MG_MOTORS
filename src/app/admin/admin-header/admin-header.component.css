@@ -1,0 +1,7 @@
+.navbar{
+    height: 75px;
+    /* position: fixed; */
+}
+.main-sidebar{
+    position: fixed !important;
+}

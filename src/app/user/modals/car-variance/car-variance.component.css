@@ -1,0 +1,16 @@
+.nav-item{
+    cursor: pointer;
+}
+
+.myAnimateClass{
+    -webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
+}
+/* 
+@keyframes example {
+    from {margin-top:5vh;}
+    to {margin-left:0;}
+} */

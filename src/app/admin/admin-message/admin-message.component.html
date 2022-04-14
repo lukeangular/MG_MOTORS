@@ -1,0 +1,18 @@
+<app-admin-breadcrumb [title]="title"></app-admin-breadcrumb>
+<div class="spinner-border" role="status" *ngIf="isLoading; else notLodBlock">
+    <span class="sr-only">Loading...</span>
+</div>
+<ng-template #notLodBlock>
+<div class="row ">
+    <div class="card col-md-3 m-1" *ngFor="let message of messageData" >
+        <div class="card-header">
+            <p>message by <b>{{message.fname}}</b></p>
+        </div>
+        <div class="card-body">
+            {{message.subject}}
+            <br><br>
+            <a routerLink="../admin-message-detail/{{message.id}}" class="card-link">Read message</a>
+        </div>
+    </div>
+</div>
+</ng-template>

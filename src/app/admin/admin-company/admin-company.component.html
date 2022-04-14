@@ -1,0 +1,85 @@
+
+<app-admin-breadcrumb [title]="title"></app-admin-breadcrumb>
+<div class="spinner-border" role="status" *ngIf="isLoading; else notLodBlock">
+    <span class="sr-only">Loading...</span>
+</div>
+<ng-template #notLodBlock>
+    <div *ngIf="companyData.length === 0; else elseBlock">
+        <a class="btn btn-md btn-outline-success"
+            routerLink="../admin-add-company">
+            Add company details
+            <i class="pl-1 fas fa-plus"></i>
+        </a>
+    </div>
+    <ng-template #elseBlock>
+        <div class="card" *ngFor="let data of companyData">
+            <div class="card-header">
+                <button type="button" class="btn btn-md btn-outline-success mb-2
+                    m-1"
+                    (click)="onEditCompany(data)"
+                    routerLink="../admin-update-company/{{data.id}}">
+                    Update
+                    <i class="pl-1 fas fa-pen"></i>
+                </button>
+                <br>
+                <h1 class="pt-2">{{data.company_name}}</h1>
+            </div>
+            <br>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><b>Phone number</b> : <span>{{data.phone_number}}</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><b>Alt phone number </b>:
+                            <span> {{data.alt_phone_number}}</span> </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><b>Email</b> : <span>{{data.email}}</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><b>Alt email </b>: <span>{{data.alt_email}}</span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><b>Fb link</b> : <span>{{data.fb_link}}</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><b>Insta link </b>: <span>{{data.instagram_link}}</span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><b>Twitter link</b> : <span>{{data.twitter_link}}</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><b>Google map </b>: <span>{{data.google_map}}</span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <p><b>Address</b> : <span>{{data.company_address}}</span>
+                    </p>
+                </div>
+                <br>
+                <div class="row">
+                    <p><b>Description</b></p>
+                    <section innerHTML={{data.description}}></section>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</ng-template>

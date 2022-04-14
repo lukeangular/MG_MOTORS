@@ -1,0 +1,19 @@
+<app-admin-breadcrumb [title]="title"></app-admin-breadcrumb>
+<div class="card">
+    <div class="card-header">
+        <h6>Subject : {{data.subject}}</h6>
+    </div>
+    <div class="card-body">
+        <p>Sender : <b>{{data.fname}}</b></p>
+        <p>Email : <b>{{data.email}}</b></p>
+        <p>Phone : <b>{{data.phone}}</b></p>
+        <p>Message : </p>
+        <b>{{data.message}}</b>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-md btn-outline-secondary" (click)="onBack()">
+            <i class="pl-1 fas fa-arrow-left"></i>
+            Back
+        </button>
+    </div>
+</div>

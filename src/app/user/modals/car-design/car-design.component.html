@@ -1,0 +1,184 @@
+<div class="model__design">
+    <div class="wrapper">
+        <div class="titles">
+            <div class="num">3</div>
+            <span class="banner-title">
+                Design
+            </span>
+        </div>
+
+        <div class="design-list">
+
+            <div class="tablist">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation" *ngFor="let car of
+                        car_design; let i= index">
+                        <a class="nav-link" id="color-tab" [ngClass]="{'active':
+                            i === index}" (click)="clickMenu(i)"
+                            data-toggle="tab" role="tab"
+                            aria-controls="color" aria-selected="true">{{car.name}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tabcontent">
+                <div class="tab-content" id="myTabContent" *ngFor="let car of
+                    car_design; let i= index">
+
+                    <!-- Color variance start -->
+                    <div class="tab-pane fade show" [ngClass]="{'show active': i
+                        === index}" id="color" role="tabpanel"
+                        aria-labelledby="color-tab">
+                        <ng-template [ngIf]="index === 0">
+                            <div class="colors-list">
+                                <div class="color-tabcontent">
+                                    <div class="tab-content" id="myTabContent">
+
+                                        <!-- show car images start -->
+                                        <div *ngFor="let car_color of car.color_variance, let i = index" class="tab-pane fade show " [ngClass]="{'show active': i === color_index}"
+                                            id="color-1" role="tabpanel"
+                                            aria-labelledby="color-1-tab">
+                                            <div class="color-wrapper">
+                                                <div class="product-img">
+                                                    <img
+                                                        src={{car_color.image}}
+                                                        alt="Sahara Gold">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- show car images end -->
+
+
+                                    </div>
+                                </div>
+
+                                <div class="color-tablist">
+                                    <ul class="nav nav-tabs" id="myTab"
+                                        role="tablist" >
+                                        <li class="nav-item" role="presentation"
+                                            data-placement="bottom"
+                                            title="Sahara Gold"
+                                            data-toggle="tooltip" *ngFor="let
+                                            car_color of car.color_variance, let i = index" (click)="colorclick(i)" >
+                                            <a class="nav-link" [ngClass]="{'active': i === color_index}"
+                                                [style.background-color]="car_color.color"
+                                                data-toggle="tab"
+                                                role="tab"
+                                                aria-controls="color-1"
+                                                aria-selected="true"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <!-- Color variance end -->
+
+
+
+                    <!-- vechile enterioir start -->
+                    <div class="tab-pane fade" [ngClass]="{'show active': i ===
+                        index}" id="int" role="tabpanel"
+                        aria-labelledby="int-tab">
+                        <ng-template [ngIf]="index === 1">
+                            <div class="interior-wrapper" *ngFor="let
+                            interior_design of car.interior let index as
+                            i">
+                            <ng-container *ngIf="interior_design.is_left;
+                            else myFlagFalse;">
+                                <div class="interior-card">
+                                    <div class="card-title">
+                                        <h2 class="title">
+                                            {{interior_design.Title}}
+                                        </h2>
+                                        <p class="des">
+                                            {{interior_design.description}}
+                                        </p>
+                                    </div>
+
+                                    <a class="product-img">
+                                        <img src = {{interior_design.image}}
+                                            alt= {{interior_design.Title}}>
+                                    </a>
+                                </div>
+                                </ng-container>
+                    
+                                <ng-template #myFlagFalse>
+                                <div class="interior-card">
+                                    <a class="product-img">
+                                        <img src = {{interior_design.image}}
+                                        alt= {{interior_design.Title}}>
+                                    </a>
+                                    <div class="card-title">
+                                        <h2 class="title">
+                                            {{interior_design.Title}}
+                                        </h2>
+                                        <p class="des">
+                                            {{interior_design.description}}
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </ng-template>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <!-- vechile enterioir end -->
+
+
+
+                    <!-- vechile exterior start -->
+                    <div class="tab-pane fade" [ngClass]="{'show active': i ===
+                        index}" id="ext" role="tabpanel"
+                        aria-labelledby="ext-tab">
+                        <ng-template [ngIf]="index === 2">
+                            <div class="interior-wrapper" *ngFor="let
+                                exterior_design of car.exterior, let index as
+                                i">
+                                <ng-container *ngIf="exterior_design.is_left;
+                                    else myFlagFalse;">
+                                    <div class="interior-card">
+                                        <div class="card-title">
+                                            <h2 class="title">
+                                                {{exterior_design.Title}}
+                                            </h2>
+                                        </div>
+
+                                        <a class="product-img">
+                                            <img src={{exterior_design.image}}
+                                                alt={{exterior_design.Title}}>
+                                        </a>
+                                    </div>
+                                </ng-container>
+                                <ng-template #myFlagFalse>
+                                    <div class="interior-card">
+
+                                        <a class="product-img">
+                                            <img src={{exterior_design.image}}
+                                                alt={{exterior_design.Title}}>
+                                        </a>
+                                        <div class="card-title">
+                                            <h2 class="title">
+                                                {{exterior_design.Title}}
+                                            </h2>
+                                        </div>
+
+                                    </div>
+                                </ng-template>
+
+
+
+                            </div>
+                        </ng-template>
+                    </div>
+                    <!-- vechile exterior end -->
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="products-model" id="vehicles" loading="lazy">
+    <!-- <h1 class="product-title">MG Models</h1> -->
+
+    <div class="all-models" *ngFor="let product_list of product_list, let index
+        as i">
+        <ng-template [ngIf]="product_list.is_left">
+            <div class="vehicle-model">
+                <div class="wrapper">
+                    <div class="model-card">
+                        <div class="model-des">
+                            <div class="title">
+                                <h2>{{product_list.title}}</h2>
+                            </div>
+                            <p class="des">
+                                {{product_list.description}}
+                            </p>
+                            <div class="explore-more">
+                                <a routerLink="{{product_list.link}}" class="explore-btn">
+                                    <span>explore more</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="model-img">
+                            <img src={{product_list.image}} alt={{product_list.title}}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template [ngIf]="!product_list.is_left" >
+            <div class="vehicle-model" style="background: #F5F5F5 !important;">
+                <div class="wrapper">
+                    <div class="model-card">
+                        <div class="model-img">
+                            <img src={{product_list.image}} alt={{product_list.title}}>
+                        </div>
+                        <div class="model-des">
+                            <div class="title">
+                                <h2>{{product_list.title}}</h2>
+                            </div>
+                            <p class="des">
+                                {{product_list.description}}
+                            </p>
+                            <div class="explore-more">
+                                <a routerLink="{{product_list.link}}" class="explore-btn">
+                                    <span>explore more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+    </div>
+</div>

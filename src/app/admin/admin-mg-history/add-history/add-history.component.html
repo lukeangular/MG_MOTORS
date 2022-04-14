@@ -1,0 +1,40 @@
+<app-admin-breadcrumb [title]="title"></app-admin-breadcrumb>
+
+<div class="card-body">
+    <div class="alert alert-success" role="alert" data-auto-dismiss="1000"
+        *ngIf="alertMessage">
+        {{alertMessage}}
+    </div>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="historyInput">History title</label>
+                <input type="text"  formControlName="history_title" class="form-control" id="historyInput" placeholder="Enter company name"  >
+            </div>
+            <div class="col-md-6">
+                <label for="dataInput">Date</label>
+                <input type="number" formControlName="history_date" id="dataInput" class="form-control" placeholder="Enter date" >
+            </div>
+        </div>
+        <br>
+        <div class="row my-1">
+            <div class="col-md-6 form-group pl-4">
+                <input class="form-check-input" type="checkbox" formControlName="is_left"  id="checkInput" >
+                <label class="form-check-label" for="checkInput"> Is it align right ?
+                </label>
+            </div>
+            <div class="col-md-6 form-group">
+            <input type="file" name="profile" (change)="onFileChange($event)" class="form-control" >
+             <small class="text-danger" *ngIf="addForm.get('file')?.invalid && addForm.get('file')?.touched">File is required</small>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="form-group">
+                <label class="form-check-label" for="descriptionInput"> Description
+                </label>
+                <textarea class="form-control" formControlName="description" id="descriptionInput" cols="30" rows="10" placeholder="Enter description"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-md">Submit</button>
+    </form>
+</div>

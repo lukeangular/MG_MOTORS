@@ -1,0 +1,46 @@
+<div class="history-section" loading="lazy">
+    <app-breadcrumb [title] = "title"></app-breadcrumb>
+    
+    <div class="timeline">
+        <div class="">
+            <div class="wrapper" *ngFor="let history_list of history, let index as
+            i" [ngsRevealSet]="{ reset:true}" [ngsInterval]="70" [ngsSelector]="'.item'">
+            <ng-container *ngIf="history_list.is_left;" style="margin-left: 0px !important;">
+                <div class="timeline-item itemset">
+                    <div class="timeline-img">
+                    </div>
+                    <div class="timeline-content timeline-card item">
+                        <div class="timeline-img-header">
+                            <div class="timeline-overlay"></div>
+                            <img src={{history_list.image}}
+                                alt={{history_list.title}}>
+
+                            <h2>{{history_list.title}}</h2>
+                        </div>
+                        <div class="date">{{history_list.date}}</div>
+                        <p>{{history_list.description}}</p>
+                    </div>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="!history_list.is_left;" >
+                <div class="timeline-item">
+                    <div class="timeline-img">
+                    </div>
+                    <div class="timeline-content timeline-card item" style="float: right !important;" >
+                        <div class="timeline-img-header">
+                            <div class="timeline-overlay"></div>
+                            <img src={{history_list.image}}
+                                alt={{history_list.title}}>
+
+                            <h2>{{history_list.title}}</h2>
+                        </div>
+                        <div class="date">{{history_list.date}}</div>
+                        <p>{{history_list.description}}</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        </div>
+    </div>
+</div>

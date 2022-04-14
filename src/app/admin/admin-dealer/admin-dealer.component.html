@@ -1,0 +1,40 @@
+<app-admin-breadcrumb [title]="title"></app-admin-breadcrumb>
+<div class="spinner-border" role="status" *ngIf="isLoading; else notLodBlock">
+    <span class="sr-only">Loading...</span>
+</div>
+<ng-template #notLodBlock>
+    <a class="btn btn-md btn-success"
+        routerLink="../admin-add-dealer">
+        Add dealer
+        <i class="pl-1 fas fa-plus"></i>
+    </a>
+    <br>
+    <div class="card mt-3" *ngFor="let data of dealderData, index as i">
+        <div class="card-header">
+            <a class="btn btn-md btn-outline-success m-1"
+                routerLink="../admin-update-dealer/{{data.id}}">
+                Update
+                <i class="pl-1 fas fa-pen"></i>
+            </a>
+            <a class="btn btn-md btn-outline-danger m-1"
+                (click)="onDelete(data.id)">Delete
+                <i class="pl-1 fas fa-trash"></i>
+            </a>
+            <br> <br>
+            <h3>{{data.dealer_name}}</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <p><b>Address</b> : <span>{{data.address}}</span>
+                </div>
+                <br>
+                <div class="row">
+                    <p><b>Phone number</b> : <span>{{data.phone_number}}</span>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <p><b>Alt phone number</b> : <span>{{data.alt_phone_number}}</span>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>

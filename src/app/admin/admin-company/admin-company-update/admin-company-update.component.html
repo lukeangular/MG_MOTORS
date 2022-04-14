@@ -1,0 +1,118 @@
+<app-admin-breadcrumb [title]="title"></app-admin-breadcrumb>
+<div class="card-body">
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="companyinput">Company name</label>
+                    <input type="text" class="form-control"
+                        id="companyinput"
+                        placeholder="Enter company name"
+                        formControlName="company_name">
+                        <small class="text-danger" *ngIf="updateForm.get('company_name')?.invalid && updateForm.get('company_name')?.touched">Company name is not valid</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="phonenumberInput">Phone number</label>
+                    <input type="number" class="form-control"
+                        id="phonenumberInput" placeholder="Enter phone number"
+                        formControlName="phone_number">
+                        <small class="text-danger" *ngIf="updateForm.get('phone_number')?.invalid && updateForm.get('phone_number')?.touched">Phone number is not valid</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="phonenumberInput">Alt phone number</label>
+                    <input type="number" class="form-control"
+                        id="phonenumberInput" placeholder="Enter alt phone number"
+                        formControlName="alt_phone_number">
+                        <small class="text-danger" *ngIf="updateForm.get('alt_phone_number')?.invalid && updateForm.get('alt_phone_number')?.touched">Alt phone number is not valid</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="emailInput">Email </label>
+                    <input type="email" class="form-control"
+                        id="emailInput"
+                        placeholder="Enter email address"
+                        formControlName="email">
+                        <small class="text-danger" *ngIf="updateForm.get('email')?.invalid && updateForm.get('email')?.touched">Email is not valid</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="emailInput">Alt email </label>
+                    <input type="email" class="form-control"
+                        id="emailInput"
+                        placeholder="Enter alt email address"
+                        formControlName="alt_email">
+                        <small class="text-danger" *ngIf="updateForm.get('alt_email')?.invalid && updateForm.get('alt_email')?.touched">Alt email is not valid</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="fbInput">Facebook link</label>
+                    <input type="text" class="form-control"
+                        id="fbInput" placeholder="Enter facebook link"
+                        formControlName="fb_link">
+                        <small class="text-danger" *ngIf="updateForm.get('fb_link')?.invalid && updateForm.get('fb_link')?.touched">Fb link is not valid</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="tweetInput">Twittern link</label>
+                    <input type="text" class="form-control"
+                        id="tweetInput" placeholder="Enter tweeter link"
+                        formControlName="twitter_link">
+                        <small class="text-danger" *ngIf="updateForm.get('twitter_link')?.invalid && updateForm.get('twitter_link')?.touched">Twitter link is not valid</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="instaInput">Instagram link</label>
+                    <input type="text" class="form-control"
+                        id="instaInput" placeholder="Enter instagram link"
+                        formControlName="instagram_link">
+                        <small class="text-danger" *ngIf="updateForm.get('instagram_link')?.invalid && updateForm.get('instagram_link')?.touched">Instagram link is not valid</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="addressInput">Company address</label>
+                    <input type="text" class="form-control"
+                        id="addressInput" placeholder="Enter company address"
+                        formControlName="company_address">
+                        <small class="text-danger" *ngIf="updateForm.get('company_address')?.invalid && updateForm.get('company_address')?.touched">Company address is not valid</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="instaInput">Google map link</label>
+                    <input type="text" class="form-control"
+                        id="instaInput" placeholder="Enter google map link"
+                        formControlName="google_map">
+                        <small class="text-danger" *ngIf="updateForm.get('google_map')?.invalid && updateForm.get('google_map')?.touched">Google map is not valid</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="">Description</label>
+                <ckeditor data="" formControlName="description"></ckeditor>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" [disabled]="updateForm.invalid" class="btn btn-md btn-primary m-1">Submit</button>
+            <button (click)="onDiscard()" class="btn btn-md btn-outline-secondary m-1">Discard</button>
+        </div>
+    </form>
+</div>

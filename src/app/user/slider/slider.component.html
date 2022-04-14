@@ -1,0 +1,32 @@
+<div class="slider-banner" loading="lazy">
+    <!-- scroll down button -->
+    <div class="scroll-down">
+        <a href="#vehicles" class="animate-icon">
+            <img src="assets/img/mouse.png" alt="mouse animation">
+        </a>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide"
+        data-ride="carousel">
+        <div class="carousel-inner" style="overflow-x: hidden;">
+            <div class="carousel-item" *ngFor="let img of imgData; let i=
+                index" [ngClass]="{'active': i === 0}" style="overflow-x: visible;">
+                <img class="d-block w-100" src={{img}} alt="slide" style="overflow-x: visible;">
+            </div>
+        </div>
+
+        <!-- slider controls -->
+        <div class="slider-controls">
+            <a class="controls carousel-control-prev"  data-bs-target="#carouselExampleControls" role="button"
+                data-bs-slide="prev" type="button">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="controls carousel-control-next" role="button"
+                data-bs-slide="next" data-bs-target="#carouselExampleControls"  type="button">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+

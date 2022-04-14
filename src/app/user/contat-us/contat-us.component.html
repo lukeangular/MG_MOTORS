@@ -1,0 +1,59 @@
+<div class="contact-section" loading="lazy mb-5">
+    <app-breadcrumb [title] = "title"></app-breadcrumb>
+
+    <div class="contact-us " loading="lazy">
+        <div class="wrapper">
+            <div class="contact-grid">
+                <div class="map-location">
+                    <div class="">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.117223552532!2d85.32624978149403!3d27.714676109790148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bc4076f6a9%3A0x6b245af3ef7e139a!2sMG%20Motors%20Nepal!5e0!3m2!1sen!2snp!4v1632740121924!5m2!1sen!2snp"
+                            width="100%" height="600" style="border:0;"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <!-- start message section -->
+                <app-message-section></app-message-section>
+                <!-- end message section -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of service we provide -->
+
+<!-- details bar with dealers contact social -->
+<div class="dealers-deatils mt-5 pt-4" loading="lazy">
+    <div class="wrapper">
+        <div class="detail-card">
+            <div class="icon-title">
+                <!-- <div class="icon">
+                    <i class="fa fa-map-marker"></i>
+                </div> -->
+                <h2 class="title">
+                    Our Dealers
+                </h2>
+            </div>
+        </div>
+        <div class="detail-card" *ngFor="let data of dealer_data, index as i">
+            <div class="icon-title">
+                <div class="dealer-info">
+                    <i class="fa fa-home"></i>
+                    <span>{{data.dealer_name}}</span>
+                </div>
+                <div class="dealer-info">                    
+                    <i class="fa fa-map-marker"></i>
+                    <span>{{data.address}}</span>
+                </div>
+                <div class="dealer-info">
+                    <i class="fa fa-phone"></i>
+                    <span>{{data.phone_number}}/{{data.alt_phone_number}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of details bar with address contact social -->
+
+<app-contact-section></app-contact-section>

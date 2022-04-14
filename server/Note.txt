@@ -1,0 +1,11 @@
+At first create folder inside the angular project 
+thne enter inside the project 
+then open gitbash or command prompt
+then enter git init and hit enter
+then give server name and other information
+***********link = https://www.npmjs.com/package/json-server*************
+then install this package = npm i json-server
+thne install this = npm install -g json-server
+then create db.jso file = touch db.json (if need install touch )
+create object with array of object
+run the server  = json-server --watch db.json

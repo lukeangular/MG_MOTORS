@@ -1,0 +1,57 @@
+<div class="products-model" id="vehicles" loading="lazy">
+    <app-breadcrumb [title] = "title"></app-breadcrumb>
+
+    <div class="all-models" *ngFor="let modal_list of model_list, let index as
+        i">
+        <ng-template [ngIf]="modal_list.is_left">
+            <div class="vehicle-model">
+                <div class="wrapper">
+                    <div class="model-card">
+                        <div class="model-des">
+                            <div class="title">
+                                <h2>{{modal_list.title}}</h2>
+                            </div>
+                            <p class="des">
+                                {{modal_list.description}}
+                            </p>
+                            <div class="explore-more">
+                                <a routerLink="" class="explore-btn">
+                                    <span>explore more</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="model-img">
+                            <img src={{modal_list.image}} alt={{modal_list.title}}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template [ngIf]="!modal_list.is_left">
+            <div class="vehicle-model" style="background: #F5F5F5;">
+                <div class="wrapper">
+                    <div class="model-card">
+                        <div class="model-img">
+                            <img src={{modal_list.image}} alt={{modal_list.title}}>
+                        </div>
+                        <div class="model-des">
+                            <div class="title">
+                                <h2>{{modal_list.title}}</h2>
+                            </div>
+                            <p class="des">
+                                {{modal_list.description}}
+                            </p>
+                            <div class="explore-more">
+                                <a routerLink="" class="explore-btn">
+                                    <span>explore more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+    </div>
+</div>

@@ -1,0 +1,71 @@
+{
+  "history": [],
+  "serviceCenter": [
+    {
+      "service_center_name": "MG SERVICE CENTER",
+      "address": "Dhumbarahi, Kathmandu",
+      "phone_number": 9801155170,
+      "longitude": 12345,
+      "altitude": 7654321,
+      "description": "<p>All new MG vehicles need to be serviced at regular intervals. Please refer to your service and warranty booklet located in your vehicle. Every MG dealer is authorised to carry out service and maintenance work in conjunction with the terms of your vehicle&#39;s warranty. We guarantee:</p>\n\n<h3>TRAINED MG MECHANICS</h3>\n\n<p>Our factory trains our technicians and will service your vehicle to the highest standards in full compliance with the terms of your vehicle&#39;s warranty using the latest diagnostics equipment.</p>\n\n<h3>GENUINE MG PARTS</h3>\n\n<p>We only ever fit genuine MG parts, which have been designed and tested to our exacting standards.</p>\n",
+      "id": 1
+    }
+  ],
+  "company": [
+    {
+      "company_name": "MG motors (updated)",
+      "phone_number": 9801155170,
+      "alt_phone_number": 9801155170,
+      "email": "sales@paramountmotors.com.np",
+      "alt_email": "sales@paramountmotors.com.np",
+      "fb_link": "www.facebook.com",
+      "twitter_link": "www.twitter.com",
+      "instagram_link": "instagran.com",
+      "company_address": "Dhumbarahi, Kathmandu",
+      "google_map": "ww.googlemap.com",
+      "description": "<h2>MG IS HERE</h2>\n\n<p>The British legend, MG Motors, with more than 90 years of history in European and global market is now here in Nepal. It would be unfair not to mention its popularity among British Aristocrats and celebrities world wide, and has been considered to be one of the well-engineered as well as well crafted automobile with such a long history in the sector. It has 5 state-of-art production and assembly units across the world, from Luxemberg to Thailand, making its upcoming unit in India with 400 crores of investement its 6th and most anticipated one, especially in South Asian market.liv The new range of MG models, that have been designed and engineered at our site in Longbridge, Birmingham, include the MG GS and MG ZS. In 2017, MG launched the MG ZS, the brand new compact-SUV which marks an exciting new era of the iconic company. The MG ZS comes with an industry leading fully-manufacturer backed, transferable 2 year/60,000-kilometers warranty. With strong financial backing, Futocasi and a bright future, MG is ready to write the most exciting chapter in what is already a very colourful story.</p>\n\n<h3>BRITISH DESIGN AND ENGINEERING</h3>\n\n<p>MG&rsquo;s site in Birmingham is home to the European Engineering Technical Centre and Design Studio, as well as a manufacturing facility and the Headquarters of MG Motor UK. It is at the Headquarters that the UK Sales and Marketing team have re-launched the MG brand here in its home market.</p>\n\n<h3>EUROPEAN ENGINEERING TECHNICAL CENTRE</h3>\n\n<p>Our team of 300 engineers based in the European Engineering Technical Centre is responsible for developing the initial concepts for all new MG vehicles. The department also ensures that each model meets the latest in European legislation and customer requirements. This includes everything from crash testing to refinement, as well as making sure the drive and handling is second to none. ??Under the leadership of David Lindley, the engineers here work on all MG products for Europe, and support product development in China and other world markets. In addition, the UK Technical Centre houses cutting-edge engine testing equipment to help develop our cars. In fact, the team is currently heavily involved in the global development of a new power train initiative, with a focus on creating new green technologies.</p>\n\n<h3>DESIGN CENTRE</h3>\n\n<p>Led by British designer Tony Williams-Kenny, the UK team is responsible for the interior and exterior design of all MG products across the globe. The dedicated 25-strong team works in a new state-of-the-art facility which opened in Birmingham in June 2010. It takes designs from 2D rendering, through virtual reality into full size 3D clay models.</p>\n",
+      "id": 1
+    }
+  ],
+  "dealer": [
+    {
+      "dealer_name": "New Narayani Motors",
+      "address": "Janakpur",
+      "phone_number": 9801656450,
+      "alt_phone_number": 9852029517,
+      "id": 1
+    },
+    {
+      "dealer_name": "Mahabir Automobiles",
+      "address": "Bargachhi, Biratnagar, Nepal",
+      "phone_number": 21460208,
+      "alt_phone_number": 9852024807,
+      "id": 2
+    }
+  ],
+  "message": [
+    {
+      "fname": "Sundar Tamang",
+      "email": "sundar@bentraytech.com",
+      "phone": 9801155170,
+      "subject": "Test message",
+      "message": "This is test message by sundar tamang",
+      "id": 1
+    },
+    {
+      "fname": "Benta ray",
+      "email": "sundartamang340@gmail.com",
+      "phone": 9801155170,
+      "subject": "Howdy message",
+      "message": "Hello mg motors this is howdy message by bent ray technologies",
+      "id": 2
+    }
+  ],
+  "userinfo" : [
+    {
+      "email" : "sundartamang@gmail.com",
+      "password": "123",
+      "name": "Sundar Tamang"
+    }
+  ]
+}

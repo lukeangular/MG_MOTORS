@@ -1,0 +1,55 @@
+<div class="enquiry-form"  [ngClass]="status ? 'active' : ''" type="button" >
+    <button class="btn-enquiry" (click)="onEnquiry()" >
+        <span>enquiry</span>
+    </button>
+
+    <div class="enq__form">
+        <h2 class="title">Enquiry Form</h2>
+
+        <form id="w2" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group field-productenquiry-name required">
+                <label class="control-label" for="productenquiry-name" >Name <i class="req">*</i></label>
+                <input type="text" id="productenquiry-name" required="" formControlName="fname" name="fname" class="form-control" name="ProductEnquiry[name]" placeholder="Full Name" aria-required="true">
+                    <small class="text-danger"
+                            *ngIf="contactForm.get('fname')?.invalid && contactForm.get('fname')?.touched">Name
+                            is not valid</small>
+                <p class="help-block help-block-error"></p>
+            </div>
+            
+            <div class="form-group field-productenquiry-email required">
+                <label class="control-label" for="productenquiry-email">Email <i class="req">*</i></label>
+                <input required="" formControlName="email" name="email" type="email" id="productenquiry-email" class="form-control" name="ProductEnquiry[email]" placeholder="Email Address" aria-required="true">
+                <small class="text-danger"
+                *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">Email
+                is not valid</small>
+                <p class="help-block help-block-error"></p>
+            </div>
+            
+            <div class="form-group field-productenquiry-phone required">
+                <label class="control-label" for="productenquiry-phone">Phone Number <i class="req">*</i></label>
+                <input required="" formControlName="phone" name="phone" type="number" id="productenquiry-phone" class="form-control" name="ProductEnquiry[phone]" maxlength="10" placeholder="Phone Number" aria-required="true">
+                <small class="text-danger" *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">Phone number
+                    is not valid</small>
+                <p class="help-block help-block-error"></p>
+            </div>
+
+            <div class="form-group field-productenquiry-product required has-success">
+                <label class="control-label" for="productenquiry-product">Product <i class="req">*</i></label>
+                <input required="" formControlName="product" name="product" type="text" id="productenquiry-product" class="form-control" name="ProductEnquiry[product]" value="mg-gs" placeholder="Product" ria-required="true" aria-invalid="false">
+                
+                <p class="help-block help-block-error"></p>
+            </div>
+
+            <div class="form-group field-productenquiry-enquiry_content required">
+                <label class="control-label" for="productenquiry-enquiry_content">Enquiry <i class="req">*</i></label>
+                <textarea required="" formControlName="enquiry" name="enquiry" id="productenquiry-enquiry_content" class="form-control" name="ProductEnquiry[enquiry_content]" placeholder="Enquiry Content" aria-required="true"></textarea>
+                <small class="text-danger" *ngIf="contactForm.get('enquiry')?.invalid && contactForm.get('enquiry')?.touched">Phone number
+                    is not valid</small>
+                <p class="help-block help-block-error"></p>
+            </div>
+
+            <button type="submit" class="btn btn-danger" [disabled]="contactForm.invalid" name="contact-button">Submit Now</button>
+
+        </form>
+    </div>
+</div>
